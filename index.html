@@ -1,8 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <title>AYES YAPI İNŞAAT | Uygarlığın Yaşam Mimarı</title>
     <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -90,39 +93,71 @@
         filter: drop-shadow(0 0 15px rgba(234, 179, 8, 0.7));
         cursor: default;
       }
+
+      /* Mobil cihazlar için özel ayarlamalar */
+      @media (max-width: 640px) {
+        .wave-bg {
+          background-size: 200% 200%;
+        }
+
+        #projectsCarousel {
+          padding: 1rem 0.5rem;
+        }
+
+        .project-card {
+          min-width: 80vw;
+          margin: 0 0.5rem;
+        }
+
+        .service-card {
+          padding: 1rem;
+        }
+
+        .contact-info {
+          padding: 1rem;
+        }
+      }
+
+      @media (min-width: 641px) and (max-width: 768px) {
+        .project-card {
+          min-width: 70vw;
+        }
+      }
     </style>
   </head>
   <body class="font-sans">
     <!-- Navigation -->
-    <nav class="sticky top-0 z-50 bg-gray-900/90 backdrop-blur-sm">
-      <div class="max-w-7xl mx-auto px-4 py-4 flex justify-center items-center">
+    <nav class="sticky top-0 z-50 bg-gray-900/90 backdrop-blur-sm py-4">
+      <div
+        class="max-w-7xl mx-auto px-4 py-3 sm:py-4 flex justify-center items-center"
+      >
         <!-- Mobile Menu Button (Top-left) -->
         <button
           id="mobileMenu"
-          class="md:hidden text-yellow-400 absolute left-4 p-3"
+          class="md:hidden text-yellow-400 absolute left-4 p-2"
         >
-          <i data-feather="menu" class="w-10 h-10"></i>
+          <i data-feather="menu" class="w-8 h-8"></i>
         </button>
         <!-- Desktop Menu -->
-        <div class="hidden md:flex space-x-8">
+        <div class="hidden md:flex space-x-8 items-center">
           <a
             href="#home"
-            class="text-gray-300 font-medium hover:text-yellow-400 transition"
+            class="text-gray-300 font-medium hover:text-yellow-400 transition text-lg"
             >Ana Sayfa</a
           >
           <a
             href="#services"
-            class="text-gray-300 font-medium hover:text-yellow-400 transition"
+            class="text-gray-300 font-medium hover:text-yellow-400 transition text-lg"
             >Hizmetlerimiz</a
           >
           <a
             href="#projects"
-            class="text-gray-300 font-medium hover:text-yellow-400 transition"
+            class="text-gray-300 font-medium hover:text-yellow-400 transition text-lg"
             >Projeler</a
           >
           <a
             href="#contact"
-            class="text-gray-300 font-medium hover:text-yellow-400 transition"
+            class="text-gray-300 font-medium hover:text-yellow-400 transition text-lg"
             >İletişim</a
           >
         </div>
@@ -166,45 +201,49 @@
       <div
         class="absolute inset-0 opacity-10 bg-repeat hovered-element"
         style="
-          background-image: url('https://static.photos/construction/1200x630/1');
+          background-image: url(&quot;https://static.photos/construction/1200x630/1&quot;);
           background-size: 30%;
           mix-blend-mode: overlay;
         "
       ></div>
 
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-        <div class="text-center space-y-8">
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 text-center"
+      >
+        <div class="text-center space-y-6 sm:space-y-8">
           <div
             class="flex flex-col items-center justify-center w-full"
             data-aos="fade-up"
           >
             <div class="relative flex justify-center items-center w-full">
               <div
-                class="relative border-t-[12px] border-l-[12px] border-r-[12px] border-black p-6 constant-glow"
+                class="relative border-t-[8px] sm:border-t-[10px] border-l-[8px] sm:border-l-[10px] border-r-[8px] sm:border-r-[10px] border-black p-4 sm:p-6 constant-glow"
               >
                 <h1
-                  class="text-6xl md:text-8xl font-extrabold tracking-tight text-yellow-400"
+                  class="text-4xl sm:text-5xl md:text-8xl font-extrabold tracking-tight text-yellow-400"
                 >
                   AYES
                 </h1>
                 <div
-                  class="absolute bottom-0 left-0 h-[12px] bg-black"
-                  style="width: calc(50% - 70px)"
+                  class="absolute bottom-0 left-0 h-[8px] sm:h-[10px] bg-black"
+                  style="width: calc(50% - 50px)"
                 ></div>
                 <div
-                  class="absolute bottom-0 right-0 h-[12px] bg-black"
-                  style="width: calc(50% - 70px)"
+                  class="absolute bottom-0 right-0 h-[8px] sm:h-[10px] bg-black"
+                  style="width: calc(50% - 50px)"
                 ></div>
               </div>
-              <div class="absolute -bottom-3 left-0 right-0 text-center">
+              <div
+                class="absolute -bottom-2 sm:-bottom-3 left-0 right-0 text-center"
+              >
                 <span
-                  class="text-lg md:text-xl font-bold text-yellow-400 constant-glow"
+                  class="text-base sm:text-lg md:text-xl font-bold text-yellow-400 constant-glow"
                   >YAPI İNŞAAT</span
                 >
               </div>
             </div>
-            <div class="text-center mt-4">
-              <p class="text-xl md:text-2xl">
+            <div class="text-center mt-3 sm:mt-4">
+              <p class="text-base sm:text-lg md:text-2xl">
                 <span class="text-yellow-400 font-italic">AYES YAPI</span>
                 <span class="text-white font-italic">
                   İNŞAAT UYGARLIĞIN YAŞAM MİMARI</span
@@ -219,12 +258,12 @@
     <!-- Services Section -->
     <section
       id="services"
-      class="py-20 bg-gradient-to-b from-black to-gray-900/90"
+      class="py-16 sm:py-20 bg-gradient-to-b from-black to-gray-900/90"
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
           <h2
-            class="text-yellow-400 text-4xl font-bold mb-4"
+            class="text-yellow-400 text-3xl sm:text-4xl font-bold mb-4"
             data-aos="fade-up"
           >
             HİZMETLERİMİZ
@@ -233,16 +272,21 @@
             class="w-24 h-1 bg-yellow-500 mx-auto mb-6"
             data-aos="fade-up"
           ></div>
-          <p class="max-w-2xl mx-auto text-gray-300" data-aos="fade-up">
+          <p
+            class="max-w-2xl mx-auto text-gray-300 text-sm sm:text-base"
+            data-aos="fade-up"
+          >
             Modern yapı çözümlerinde uzmanlaşmış ekibimizle en kaliteli
             hizmetleri sunuyoruz
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6"
+        >
           <!-- Generate services -->
           <div
-            class="bg-gray-800 rounded-xl p-6 transform transition duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-yellow-400/20 group"
+            class="bg-gray-800 rounded-xl p-4 sm:p-6 service-card transform transition duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-yellow-400/20 group"
             data-aos="fade-up"
           >
             <div
@@ -254,17 +298,19 @@
               ></i>
             </div>
             <h3
-              class="text-yellow-400 text-xl font-bold mb-3 transition-colors duration-300"
+              class="text-yellow-400 text-lg sm:text-xl font-bold mb-2 sm:mb-3 transition-colors duration-300"
             >
               Dış Cephe Mantolama
             </h3>
-            <p class="text-gray-300 transition-colors duration-300">
+            <p
+              class="text-gray-300 text-sm sm:text-base transition-colors duration-300"
+            >
               Enerji verimliliğini artıran modern mantolama sistemleri
             </p>
           </div>
 
           <div
-            class="bg-gray-800 rounded-xl p-6 transform transition duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-yellow-400/20 group"
+            class="bg-gray-800 rounded-xl p-4 sm:p-6 service-card transform transition duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-yellow-400/20 group"
             data-aos="fade-up"
             data-aos-delay="100"
           >
@@ -428,11 +474,11 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-gray-900">
+    <section id="projects" class="py-16 sm:py-20 bg-gray-900">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
           <h2
-            class="text-yellow-400 text-4xl font-bold mb-4"
+            class="text-yellow-400 text-3xl sm:text-4xl font-bold mb-4"
             data-aos="fade-up"
           >
             PROJE GALERİSİ
@@ -441,7 +487,10 @@
             class="w-24 h-1 bg-yellow-500 mx-auto mb-6"
             data-aos="fade-up"
           ></div>
-          <p class="max-w-2xl mx-auto text-gray-300" data-aos="fade-up">
+          <p
+            class="max-w-2xl mx-auto text-gray-300 text-sm sm:text-base"
+            data-aos="fade-up"
+          >
             Gerçekleştirdiğimiz başarılı projelerimizden örnekler
           </p>
         </div>
@@ -451,11 +500,11 @@
           <!-- Carousel Items with Modern Scrollbar -->
           <div
             id="projectsCarousel"
-            class="flex overflow-x-auto py-4 scrollbar-hide"
+            class="flex overflow-x-auto py-3 sm:py-4 scrollbar-hide"
           >
             <!-- Project 1 -->
             <div
-              class="flex-none w-64 mx-2 snap-center cursor-pointer"
+              class="project-card flex-none snap-center cursor-pointer"
               onclick="openModal('WhatsApp Görsel 2025-09-08 saat 10.32.00_03d7fea2.jpg', 'Lüks Villa Mantolama', 'Trabzon da modern dış cephe mantolama')"
             >
               <div class="relative overflow-hidden rounded-xl group/item h-48">
@@ -467,10 +516,12 @@
                 <div
                   class="absolute inset-0 bg-black/70 backdrop-blur flex flex-col justify-end p-4 translate-y-full group-hover/item:translate-y-0 transition duration-700"
                 >
-                  <h3 class="text-yellow-400 font-bold text-lg mb-1">
+                  <h3
+                    class="text-yellow-400 font-bold text-base sm:text-lg mb-1"
+                  >
                     Lüks Villa Mantolama
                   </h3>
-                  <p class="text-gray-200 text-sm">
+                  <p class="text-gray-200 text-xs sm:text-sm">
                     Trabzon'da modern dış cephe mantolama
                   </p>
                 </div>
@@ -700,12 +751,12 @@
     <!-- Contact Section -->
     <section
       id="contact"
-      class="py-20 bg-gradient-to-b from-black to-gray-900 text-gray-200"
+      class="py-16 sm:py-20 bg-gradient-to-b from-black to-gray-900 text-gray-200"
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
           <h2
-            class="text-yellow-400 text-4xl font-bold mb-4"
+            class="text-yellow-400 text-3xl sm:text-4xl font-bold mb-4"
             data-aos="fade-up"
           >
             İLETİŞİM
@@ -716,10 +767,10 @@
           ></div>
         </div>
 
-        <div class="flex flex-col gap-16">
+        <div class="flex flex-col gap-12">
           <!-- Contact Information -->
           <div
-            class="grid grid-cols-1 md:grid-cols-2 gap-8 aos-init aos-animate hovered-element"
+            class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 contact-info aos-init aos-animate hovered-element"
             data-aos="fade-right"
           >
             <div class="flex items-start">
@@ -743,10 +794,10 @@
                 </svg>
               </div>
               <div>
-                <h3 class="text-lg font-bold text-yellow-400 mb-1">
+                <h3 class="text-base sm:text-lg font-bold text-yellow-400 mb-1">
                   ADRESİMİZ
                 </h3>
-                <p class="text-gray-300">
+                <p class="text-gray-300 text-sm sm:text-base">
                   Söğütlü / Adnan Kahveci Bulvarı<br />
                   Akçataş Sitesi, Gül Apartmanı No: 15A<br />
                   Trabzon
@@ -774,10 +825,12 @@
                 </svg>
               </div>
               <div>
-                <h3 class="text-lg font-bold text-yellow-400 mb-1">TELEFON</h3>
+                <h3 class="text-base sm:text-lg font-bold text-yellow-400 mb-1">
+                  TELEFON
+                </h3>
                 <a
                   href="tel:+905466067631"
-                  class="text-gray-300 hover:text-yellow-400 text-xl"
+                  class="text-gray-300 hover:text-yellow-400 text-base sm:text-xl"
                 >
                   +90 546 606 7631
                 </a>
@@ -787,7 +840,7 @@
 
           <!-- Map -->
           <div
-            class="bg-gray-900 rounded-xl overflow-hidden h-96 w-full"
+            class="bg-gray-900 rounded-xl overflow-hidden h-64 sm:h-80 w-full"
             data-aos="fade-left"
           >
             <iframe
@@ -802,29 +855,36 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 border-t border-gray-800 pb-10 pt-12">
+    <footer
+      class="bg-gray-900 border-t border-gray-800 pb-8 sm:pb-10 pt-10 sm:pt-12"
+    >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
           <!-- Footer Branding -->
           <div>
-            <h3 class="text-yellow-400 font-bold text-2xl mb-4">AYES YAPI</h3>
-            <p class="text-gray-400 mb-6 max-w-xs">Sosyal Medya
+            <h3
+              class="text-yellow-400 font-bold text-xl sm:text-2xl mb-3 sm:mb-4"
+            >
+              AYES YAPI
+            </h3>
+            <p class="text-gray-400 mb-4 sm:mb-6 text-sm sm:text-base">
+              Sosyal Medya
+            </p>
             <div class="flex justify-start">
               <a
                 href="https://www.instagram.com/ayesyapiinsaat/"
-                class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-yellow-400 hover:bg-yellow-400 hover:text-black transition"
+                class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gray-800 flex items-center justify-center text-yellow-400 hover:bg-yellow-400 hover:text-black transition"
                 target="_blank"
               >
-                <i data-feather="instagram" class="w-5 h-5"></i>
+                <i data-feather="instagram" class="w-4 h-4 sm:w-5 sm:h-5"></i>
               </a>
             </div>
-            </p>
           </div>
 
           <!-- Footer Contact -->
           <div>
             <h4
-              class="text-gray-300 font-bold text-lg border-l-4 border-yellow-400 pl-3 mb-5"
+              class="text-gray-300 font-bold text-base sm:text-lg border-l-4 border-yellow-400 pl-2 sm:pl-3 mb-3 sm:mb-5"
             >
               İLETİŞİM
             </h4>
@@ -832,32 +892,36 @@
               <li class="flex items-start">
                 <i
                   data-feather="map-pin"
-                  class="w-4 h-4 mt-1 mr-3 text-yellow-400"
+                  class="w-3 h-3 sm:w-4 sm:h-4 mt-1 mr-2 sm:mr-3 text-yellow-400"
                 ></i>
-                <span class="text-gray-400"
+                <span class="text-gray-400 text-sm sm:text-base"
                   >Söğütlü / Adnan Kahveci Bulvarı, Trabzon</span
                 >
               </li>
               <li class="flex items-start">
                 <i
                   data-feather="phone"
-                  class="w-4 h-4 mt-1 mr-3 text-yellow-400"
+                  class="w-3 h-3 sm:w-4 sm:h-4 mt-1 mr-2 sm:mr-3 text-yellow-400"
                 ></i>
-                <span class="text-gray-400">+90 546 606 7631</span>
+                <span class="text-gray-400 text-sm sm:text-base"
+                  >+90 546 606 7631</span
+                >
               </li>
               <li class="flex items-start">
                 <i
                   data-feather="mail"
-                  class="w-4 h-4 mt-1 mr-3 text-yellow-400"
+                  class="w-3 h-3 sm:w-4 sm:h-4 mt-1 mr-2 sm:mr-3 text-yellow-400"
                 ></i>
-                <span class="text-gray-400">info@ayesyapi.com</span>
+                <span class="text-gray-400 text-sm sm:text-base"
+                  >info@ayesyapi.com</span
+                >
               </li>
             </ul>
           </div>
         </div>
 
         <div
-          class="pt-8 mt-8 border-t border-gray-800 text-center text-gray-500"
+          class="pt-6 sm:pt-8 mt-6 sm:mt-8 border-t border-gray-800 text-center text-gray-500 text-xs sm:text-sm"
         >
           <p>&copy; 2025 AYES YAPI İNŞAAT. Tüm Hakları Saklıdır.</p>
         </div>
