@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AYES YAPI İNŞAAT | Uygarlığın Yaşam Mimarı</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+      @keyframes wave {
+        0%,
+        100% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+      }
+      .wave-bg {
+        background-size: 400% 400%;
+        background: linear-gradient(
+          135deg,
+          #1a1a1a 0%,
+          #2d2d2d 25%,
+          #1a1a1a 50%,
+          #2d2d2d 75%,
+          #1a1a1a 100%
+        );
+        animation: wave 20s ease infinite;
+      }
+
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+
+      /* Hide scrollbar for IE, Edge and Firefox */
+      .scrollbar-hide {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+      }
+
+      /* Custom scrollbar for the projects carousel */
+      #projectsCarousel::-webkit-scrollbar {
+        height: 8px;
+      }
+
+      #projectsCarousel::-webkit-scrollbar-track {
+        background: transparent;
+        border-radius: 4px;
+        margin: 0 10px;
+      }
+
+      #projectsCarousel::-webkit-scrollbar-thumb {
+        background: #eab308; /* yellow-400 */
+        border-radius: 4px;
+      }
+
+      #projectsCarousel::-webkit-scrollbar-thumb:hover {
+        background: #facc15; /* yellow-500 */
+      }
+
+      /* Firefox scrollbar */
+      #projectsCarousel {
+        scrollbar-width: thin;
+        scrollbar-color: #eab308 transparent;
+      }
+
+      /* Breathing effect for slogan */
+      @keyframes breathe {
+        0%,
+        100% {
+          opacity: 0.4;
+        }
+        50% {
+          opacity: 0.8;
+        }
+      }
+
+      .breathe {
+        animation: breathe 3s ease-in-out infinite;
+      }
+
+      /* Constant glow effect for AYES logo and YAPI INSAAT text */
+      .constant-glow {
+        filter: drop-shadow(0 0 15px rgba(234, 179, 8, 0.7));
+        cursor: default;
+      }
+    </style>
+  </head>
+  <body class="font-sans">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-gray-900/90 backdrop-blur-sm">
+      <div class="max-w-7xl mx-auto px-4 py-4 flex justify-center items-center">
+        <!-- Mobile Menu Button (Top-left) -->
+        <button
+          id="mobileMenu"
+          class="md:hidden text-yellow-400 absolute left-4 p-3"
+        >
+          <i data-feather="menu" class="w-10 h-10"></i>
+        </button>
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex space-x-8">
+          <a
+            href="#home"
+            class="text-gray-300 font-medium hover:text-yellow-400 transition"
+            >Ana Sayfa</a
+          >
+          <a
+            href="#services"
+            class="text-gray-300 font-medium hover:text-yellow-400 transition"
+            >Hizmetlerimiz</a
+          >
+          <a
+            href="#projects"
+            class="text-gray-300 font-medium hover:text-yellow-400 transition"
+            >Projeler</a
+          >
+          <a
+            href="#contact"
+            class="text-gray-300 font-medium hover:text-yellow-400 transition"
+            >İletişim</a
+          >
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div
+        id="mobileMenuContent"
+        class="hidden bg-gray-900/95 md:hidden absolute top-full left-0 w-full"
+      >
+        <div class="flex flex-col py-4 px-4">
+          <a
+            href="#home"
+            class="py-3 px-4 text-gray-300 hover:text-yellow-400 hover:bg-yellow-400/10 rounded transition duration-300"
+            >Ana Sayfa</a
+          >
+          <a
+            href="#services"
+            class="py-3 px-4 text-gray-300 hover:text-yellow-400 hover:bg-yellow-400/10 rounded transition duration-300"
+            >Hizmetlerimiz</a
+          >
+          <a
+            href="#projects"
+            class="py-3 px-4 text-gray-300 hover:text-yellow-400 hover:bg-yellow-400/10 rounded transition duration-300"
+            >Projeler</a
+          >
+          <a
+            href="#contact"
+            class="py-3 px-4 text-gray-300 hover:text-yellow-400 hover:bg-yellow-400/10 rounded transition duration-300"
+            >İletişim</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="wave-bg relative min-h-screen flex items-center overflow-hidden"
+    >
+      <!-- Background pattern -->
+      <div
+        class="absolute inset-0 opacity-10 bg-repeat hovered-element"
+        style="
+          background-image: url('https://static.photos/construction/1200x630/1');
+          background-size: 30%;
+          mix-blend-mode: overlay;
+        "
+      ></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+        <div class="text-center space-y-8">
+          <div
+            class="flex flex-col items-center justify-center w-full"
+            data-aos="fade-up"
+          >
+            <div class="relative flex justify-center items-center w-full">
+              <div
+                class="relative border-t-[12px] border-l-[12px] border-r-[12px] border-black p-6 constant-glow"
+              >
+                <h1
+                  class="text-6xl md:text-8xl font-extrabold tracking-tight text-yellow-400"
+                >
+                  AYES
+                </h1>
+                <div
+                  class="absolute bottom-0 left-0 h-[12px] bg-black"
+                  style="width: calc(50% - 70px)"
+                ></div>
+                <div
+                  class="absolute bottom-0 right-0 h-[12px] bg-black"
+                  style="width: calc(50% - 70px)"
+                ></div>
+              </div>
+              <div class="absolute -bottom-3 left-0 right-0 text-center">
+                <span
+                  class="text-lg md:text-xl font-bold text-yellow-400 constant-glow"
+                  >YAPI İNŞAAT</span
+                >
+              </div>
+            </div>
+            <div class="text-center mt-4">
+              <p class="text-xl md:text-2xl">
+                <span class="text-yellow-400 font-italic">AYES YAPI</span>
+                <span class="text-white font-italic">
+                  İNŞAAT UYGARLIĞIN YAŞAM MİMARI</span
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section
+      id="services"
+      class="py-20 bg-gradient-to-b from-black to-gray-900/90"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2
+            class="text-yellow-400 text-4xl font-bold mb-4"
+            data-aos="fade-up"
+          >
+            HİZMETLERİMİZ
+          </h2>
+          <div
+            class="w-24 h-1 bg-yellow-500 mx-auto mb-6"
+            data-aos="fade-up"
+          ></div>
+          <p class="max-w-2xl mx-auto text-gray-300" data-aos="fade-up">
+            Modern yapı çözümlerinde uzmanlaşmış ekibimizle en kaliteli
+            hizmetleri sunuyoruz
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Generate services -->
+          <div
+            class="bg-gray-800 rounded-xl p-6 transform transition duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-yellow-400/20 group"
+            data-aos="fade-up"
+          >
+            <div
+              class="w-16 h-16 bg-yellow-400 rounded-lg flex items-center justify-center mb-5 group-hover:bg-black transition-all duration-300"
+            >
+              <i
+                data-feather="home"
+                class="stroke-[1.5] w-8 h-8 group-hover:text-yellow-400 text-black transition-colors duration-300"
+              ></i>
+            </div>
+            <h3
+              class="text-yellow-400 text-xl font-bold mb-3 transition-colors duration-300"
+            >
+              Dış Cephe Mantolama
+            </h3>
+            <p class="text-gray-300 transition-colors duration-300">
+              Enerji verimliliğini artıran modern mantolama sistemleri
+            </p>
+          </div>
+
+          <div
+            class="bg-gray-800 rounded-xl p-6 transform transition duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-yellow-400/20 group"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div
+              class="w-16 h-16 bg-yellow-400 rounded-lg flex items-center justify-center mb-5 group-hover:bg-black transition-all duration-300"
+            >
+              <i
+                data-feather="thermometer"
+                class="stroke-[1.5] w-8 h-8 group-hover:text-yellow-400 text-black transition-colors duration-300"
+              ></i>
+            </div>
+            <h3
+              class="text-yellow-400 text-xl font-bold mb-3 transition-colors duration-300"
+            >
+              Isı Yalıtımı
+            </h3>
+            <p class="text-gray-300 transition-colors duration-300">
+              Yüksek performanslı ısı yalıtım çözümleri
+            </p>
+          </div>
+
+          <div
+            class="bg-gray-800 rounded-xl p-6 transform transition duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-yellow-400/20 group"
+            data-aos="fade-up"
+            data-aos-delay="150"
+          >
+            <div
+              class="w-16 h-16 bg-yellow-400 rounded-lg flex items-center justify-center mb-5 group-hover:bg-black transition-all duration-300"
+            >
+              <i
+                data-feather="umbrella"
+                class="stroke-[1.5] w-8 h-8 group-hover:text-yellow-400 text-black transition-colors duration-300"
+              ></i>
+            </div>
+            <h3
+              class="text-yellow-400 text-xl font-bold mb-3 transition-colors duration-300"
+            >
+              Çatı Yenileme
+            </h3>
+            <p class="text-gray-300 transition-colors duration-300">
+              Mekanik ve estetik çatı yenileme hizmetleri
+            </p>
+          </div>
+
+          <div
+            class="bg-gray-800 rounded-xl p-6 transform transition duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-yellow-400/20 group"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div
+              class="w-16 h-16 bg-yellow-400 rounded-lg flex items-center justify-center mb-5 group-hover:bg-black transition-all duration-300"
+            >
+              <i
+                data-feather="layers"
+                class="stroke-[1.5] w-8 h-8 group-hover:text-yellow-400 text-black transition-colors duration-300"
+              ></i>
+            </div>
+            <h3
+              class="text-yellow-400 text-xl font-bold mb-3 transition-colors duration-300"
+            >
+              İzolasyon
+            </h3>
+            <p class="text-gray-300 transition-colors duration-300">
+              Su ve neme karşı profesyonel izolasyon
+            </p>
+          </div>
+
+          <div
+            class="bg-gray-800 rounded-xl p-6 transform transition duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-yellow-400/20 group"
+            data-aos="fade-up"
+            data-aos-delay="250"
+          >
+            <div
+              class="w-16 h-16 bg-yellow-400 rounded-lg flex items-center justify-center mb-5 group-hover:bg-black transition-all duration-300"
+            >
+              <i
+                data-feather="tool"
+                class="stroke-[1.5] w-8 h-8 group-hover:text-yellow-400 text-black transition-colors duration-300"
+              ></i>
+            </div>
+            <h3
+              class="text-yellow-400 text-xl font-bold mb-3 transition-colors duration-300"
+            >
+              İç-Dış Cephe Tadilat
+            </h3>
+            <p class="text-gray-300 transition-colors duration-300">
+              Komple cephe yenileme ve tadilat çözümleri
+            </p>
+          </div>
+
+          <div
+            class="bg-gray-800 rounded-xl p-6 transform transition duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-yellow-400/20 group"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div
+              class="w-16 h-16 bg-yellow-400 rounded-lg flex items-center justify-center mb-5 group-hover:bg-black transition-all duration-300"
+            >
+              <i
+                data-feather="droplet"
+                class="stroke-[1.5] w-8 h-8 group-hover:text-yellow-400 text-black transition-colors duration-300"
+              ></i>
+            </div>
+            <h3
+              class="text-yellow-400 text-xl font-bold mb-3 transition-colors duration-300"
+            >
+              İç-Dış Cephe Boya
+            </h3>
+            <p class="text-gray-300 transition-colors duration-300">
+              Premium boya uygulamaları
+            </p>
+          </div>
+
+          <div
+            class="bg-gray-800 rounded-xl p-6 transform transition duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-yellow-400/20 group"
+            data-aos="fade-up"
+            data-aos-delay="350"
+          >
+            <div
+              class="w-16 h-16 bg-yellow-400 rounded-lg flex items-center justify-center mb-5 group-hover:bg-black transition-all duration-300"
+            >
+              <i
+                data-feather="volume-x"
+                class="stroke-[1.5] w-8 h-8 group-hover:text-yellow-400 text-black transition-colors duration-300"
+              ></i>
+            </div>
+            <h3
+              class="text-yellow-400 text-xl font-bold mb-3 transition-colors duration-300"
+            >
+              Ses Yalıtımı
+            </h3>
+            <p class="text-gray-300 transition-colors duration-300">
+              Akustik konfor için ses izolasyon sistemleri
+            </p>
+          </div>
+
+          <div
+            class="bg-gray-800 rounded-xl p-6 transform transition duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-yellow-400/20 group"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div
+              class="w-16 h-16 bg-yellow-400 rounded-lg flex items-center justify-center mb-5 group-hover:bg-black transition-all duration-300"
+            >
+              <i
+                data-feather="sun"
+                class="stroke-[1.5] w-8 h-8 group-hover:text-yellow-400 text-black transition-colors duration-300"
+              ></i>
+            </div>
+            <h3
+              class="text-yellow-400 text-xl font-bold mb-3 transition-colors duration-300"
+            >
+              Yerden Isıtma
+            </h3>
+            <p class="text-gray-300 transition-colors duration-300">
+              Enerji verimli yerden ısıtma sistemleri
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2
+            class="text-yellow-400 text-4xl font-bold mb-4"
+            data-aos="fade-up"
+          >
+            PROJE GALERİSİ
+          </h2>
+          <div
+            class="w-24 h-1 bg-yellow-500 mx-auto mb-6"
+            data-aos="fade-up"
+          ></div>
+          <p class="max-w-2xl mx-auto text-gray-300" data-aos="fade-up">
+            Gerçekleştirdiğimiz başarılı projelerimizden örnekler
+          </p>
+        </div>
+
+        <!-- Modern Horizontal Carousel -->
+        <div class="flex items-center">
+          <!-- Carousel Items with Modern Scrollbar -->
+          <div
+            id="projectsCarousel"
+            class="flex overflow-x-auto py-4 scrollbar-hide"
+          >
+            <!-- Project 1 -->
+            <div
+              class="flex-none w-64 mx-2 snap-center cursor-pointer"
+              onclick="openModal('imgs/WhatsApp Görsel 2025-09-08 saat 10.32.00_03d7fea2.jpg', 'Lüks Villa Mantolama', 'Trabzon da modern dış cephe mantolama')"
+            >
+              <div class="relative overflow-hidden rounded-xl group/item h-48">
+                <img
+                  src="imgs/WhatsApp Görsel 2025-09-08 saat 10.32.00_03d7fea2.jpg"
+                  alt="Proje Görseli"
+                  class="w-full h-full object-cover transition duration-700 transform group-hover/item:scale-110"
+                />
+                <div
+                  class="absolute inset-0 bg-black/70 backdrop-blur flex flex-col justify-end p-4 translate-y-full group-hover/item:translate-y-0 transition duration-700"
+                >
+                  <h3 class="text-yellow-400 font-bold text-lg mb-1">
+                    Lüks Villa Mantolama
+                  </h3>
+                  <p class="text-gray-200 text-sm">
+                    Trabzon'da modern dış cephe mantolama
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div
+              class="flex-none w-64 mx-2 snap-center cursor-pointer"
+              onclick="openModal('imgs/WhatsApp Görsel 2025-09-08 saat 10.32.00_20372f6c.jpg', 'Oturma Kompleksi', 'Komple çatı yenileme ve izolasyon çalışması')"
+            >
+              <div class="relative overflow-hidden rounded-xl group/item h-48">
+                <img
+                  src="imgs/WhatsApp Görsel 2025-09-08 saat 10.32.00_20372f6c.jpg"
+                  alt="Proje Görseli"
+                  class="w-full h-full object-cover transition duration-700 transform group-hover/item:scale-110"
+                />
+                <div
+                  class="absolute inset-0 bg-black/70 backdrop-blur flex flex-col justify-end p-4 translate-y-full group-hover/item:translate-y-0 transition duration-700"
+                >
+                  <h3 class="text-yellow-400 font-bold text-lg mb-1">
+                    Oturma Kompleksi
+                  </h3>
+                  <p class="text-gray-200 text-sm">
+                    Komple çatı yenileme ve izolasyon çalışması
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div
+              class="flex-none w-64 mx-2 snap-center cursor-pointer"
+              onclick="openModal('imgs/WhatsApp Görsel 2025-09-08 saat 10.32.00_5e75efab.jpg', 'Konak Restorasyon', 'Tarihi konak iç-dış tadilat ve boya')"
+            >
+              <div class="relative overflow-hidden rounded-xl group/item h-48">
+                <img
+                  src="imgs/WhatsApp Görsel 2025-09-08 saat 10.32.00_5e75efab.jpg"
+                  alt="Proje Görseli"
+                  class="w-full h-full object-cover transition duration-700 transform group-hover/item:scale-110"
+                />
+                <div
+                  class="absolute inset-0 bg-black/70 backdrop-blur flex flex-col justify-end p-4 translate-y-full group-hover/item:translate-y-0 transition duration-700"
+                >
+                  <h3 class="text-yellow-400 font-bold text-lg mb-1">
+                    Konak Restorasyon
+                  </h3>
+                  <p class="text-gray-200 text-sm">
+                    Tarihi konak iç-dış tadilat ve boya
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div
+              class="flex-none w-64 mx-2 snap-center cursor-pointer"
+              onclick="openModal('imgs/WhatsApp Görsel 2025-09-08 saat 10.32.00_74147df4.jpg', 'Ofis Kompleksi', 'Tam kapsamlı dış cephe yenileme')"
+            >
+              <div class="relative overflow-hidden rounded-xl group/item h-48">
+                <img
+                  src="imgs/WhatsApp Görsel 2025-09-08 saat 10.32.00_74147df4.jpg"
+                  alt="Proje Görseli"
+                  class="w-full h-full object-cover transition duration-700 transform group-hover/item:scale-110"
+                />
+                <div
+                  class="absolute inset-0 bg-black/70 backdrop-blur flex flex-col justify-end p-4 translate-y-full group-hover/item:translate-y-0 transition duration-700"
+                >
+                  <h3 class="text-yellow-400 font-bold text-lg mb-1">
+                    Ofis Kompleksi
+                  </h3>
+                  <p class="text-gray-200 text-sm">
+                    Tam kapsamlı dış cephe yenileme
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div
+              class="flex-none w-64 mx-2 snap-center cursor-pointer"
+              onclick="openModal('imgs/WhatsApp Görsel 2025-09-08 saat 10.32.00_779ce586.jpg', 'Ofis Yerden Isıtma', 'Modern tekniklerle yerden ısıtma sistemleri')"
+            >
+              <div class="relative overflow-hidden rounded-xl group/item h-48">
+                <img
+                  src="imgs/WhatsApp Görsel 2025-09-08 saat 10.32.00_779ce586.jpg"
+                  alt="Proje Görseli"
+                  class="w-full h-full object-cover transition duration-700 transform group-hover/item:scale-110"
+                />
+                <div
+                  class="absolute inset-0 bg-black/70 backdrop-blur flex flex-col justify-end p-4 translate-y-full group-hover/item:translate-y-0 transition duration-700"
+                >
+                  <h3 class="text-yellow-400 font-bold text-lg mb-1">
+                    Ofis Yerden Isıtma
+                  </h3>
+                  <p class="text-gray-200 text-sm">
+                    Modern tekniklerle yerden ısıtma sistemleri
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div
+              class="flex-none w-64 mx-2 snap-center cursor-pointer"
+              onclick="openModal('imgs/WhatsApp Görsel 2025-09-08 saat 10.32.00_7b2c32e7.jpg', 'Ofis Kompleksi', 'Tam kapsamlı dış cephe yenileme')"
+            >
+              <div class="relative overflow-hidden rounded-xl group/item h-48">
+                <img
+                  src="imgs/WhatsApp Görsel 2025-09-08 saat 10.32.00_7b2c32e7.jpg"
+                  alt="Proje Görseli"
+                  class="w-full h-full object-cover transition duration-700 transform group-hover/item:scale-110"
+                />
+                <div
+                  class="absolute inset-0 bg-black/70 backdrop-blur flex flex-col justify-end p-4 translate-y-full group-hover/item:translate-y-0 transition duration-700"
+                >
+                  <h3 class="text-yellow-400 font-bold text-lg mb-1">
+                    Ofis Kompleksi
+                  </h3>
+                  <p class="text-gray-200 text-sm">
+                    Tam kapsamlı dış cephe yenileme
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 7 -->
+            <div
+              class="flex-none w-64 mx-2 snap-center cursor-pointer"
+              onclick="openModal('imgs/WhatsApp Görsel 2025-09-08 saat 10.32.00_8c5ab8e9.jpg', 'Rezidans Isı Yalıtımı', 'Premium ısı yalıtım uygulaması')"
+            >
+              <div class="relative overflow-hidden rounded-xl group/item h-48">
+                <img
+                  src="imgs/WhatsApp Görsel 2025-09-08 saat 10.32.00_8c5ab8e9.jpg"
+                  alt="Proje Görseli"
+                  class="w-full h-full object-cover transition duration-700 transform group-hover/item:scale-110"
+                />
+                <div
+                  class="absolute inset-0 bg-black/70 backdrop-blur flex flex-col justify-end p-4 translate-y-full group-hover/item:translate-y-0 transition duration-700"
+                >
+                  <h3 class="text-yellow-400 font-bold text-lg mb-1">
+                    Rezidans Isı Yalıtımı
+                  </h3>
+                  <p class="text-gray-200 text-sm">
+                    Premium ısı yalıtım uygulaması
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 8 -->
+            <div
+              class="flex-none w-64 mx-2 snap-center cursor-pointer"
+              onclick="openModal('imgs/WhatsApp Görsel 2025-09-08 saat 10.32.00_a74dedc1.jpg', 'Villa Boya', 'Lüks villa dış cephe boya uygulaması')"
+            >
+              <div class="relative overflow-hidden rounded-xl group/item h-48">
+                <img
+                  src="imgs/WhatsApp Görsel 2025-09-08 saat 10.32.00_a74dedc1.jpg"
+                  alt="Proje Görseli"
+                  class="w-full h-full object-cover transition duration-700 transform group-hover/item:scale-110"
+                />
+                <div
+                  class="absolute inset-0 bg-black/70 backdrop-blur flex flex-col justify-end p-4 translate-y-full group-hover/item:translate-y-0 transition duration-700"
+                >
+                  <h3 class="text-yellow-400 font-bold text-lg mb-1">
+                    Villa Boya
+                  </h3>
+                  <p class="text-gray-200 text-sm">
+                    Lüks villa dış cephe boya uygulaması
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 9 -->
+            <div
+              class="flex-none w-64 mx-2 snap-center cursor-pointer"
+              onclick="openModal('imgs/WhatsApp Görsel 2025-09-08 saat 10.32.00_ae8470d6.jpg', 'Ses Yalıtımı', 'Stüdyo akustik izolasyon çalışması')"
+            >
+              <div class="relative overflow-hidden rounded-xl group/item h-48">
+                <img
+                  src="imgs/WhatsApp Görsel 2025-09-08 saat 10.32.00_ae8470d6.jpg"
+                  alt="Proje Görseli"
+                  class="w-full h-full object-cover transition duration-700 transform group-hover/item:scale-110"
+                />
+                <div
+                  class="absolute inset-0 bg-black/70 backdrop-blur flex flex-col justify-end p-4 translate-y-full group-hover/item:translate-y-0 transition duration-700"
+                >
+                  <h3 class="text-yellow-400 font-bold text-lg mb-1">
+                    Ses Yalıtımı
+                  </h3>
+                  <p class="text-gray-200 text-sm">
+                    Stüdyo akustik izolasyon çalışması
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 10 -->
+            <div
+              class="flex-none w-64 mx-2 snap-center cursor-pointer"
+              onclick="openModal('imgs/WhatsApp Görsel 2025-09-08 saat 10.32.00_e1a12c78.jpg', 'Yerden Isıtma', 'Ofis binası yerden ısıtma sistemi')"
+            >
+              <div class="relative overflow-hidden rounded-xl group/item h-48">
+                <img
+                  src="imgs/WhatsApp Görsel 2025-09-08 saat 10.32.00_e1a12c78.jpg"
+                  alt="Proje Görseli"
+                  class="w-full h-full object-cover transition duration-700 transform group-hover/item:scale-110"
+                />
+                <div
+                  class="absolute inset-0 bg-black/70 backdrop-blur flex flex-col justify-end p-4 translate-y-full group-hover/item:translate-y-0 transition duration-700"
+                >
+                  <h3 class="text-yellow-400 font-bold text-lg mb-1">
+                    Yerden Isıtma
+                  </h3>
+                  <p class="text-gray-200 text-sm">
+                    Ofis binası yerden ısıtma sistemi
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section
+      id="contact"
+      class="py-20 bg-gradient-to-b from-black to-gray-900 text-gray-200"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2
+            class="text-yellow-400 text-4xl font-bold mb-4"
+            data-aos="fade-up"
+          >
+            İLETİŞİM
+          </h2>
+          <div
+            class="w-24 h-1 bg-yellow-500 mx-auto mb-6"
+            data-aos="fade-up"
+          ></div>
+        </div>
+
+        <div class="flex flex-col gap-16">
+          <!-- Contact Information -->
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 gap-8 aos-init aos-animate hovered-element"
+            data-aos="fade-right"
+          >
+            <div class="flex items-start">
+              <div class="bg-yellow-400 p-3 rounded-lg mr-5">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-map-pin text-black w-6 h-6"
+                >
+                  <path
+                    d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                  ></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-yellow-400 mb-1">
+                  ADRESİMİZ
+                </h3>
+                <p class="text-gray-300">
+                  Söğütlü / Adnan Kahveci Bulvarı<br />
+                  Akçataş Sitesi, Gül Apartmanı No: 15A<br />
+                  Trabzon
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div class="bg-yellow-400 p-3 rounded-lg mr-5">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-phone text-black w-6 h-6"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 极-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 极 0 0 1 22 16.92z"
+                  ></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-yellow-400 mb-1">TELEFON</h3>
+                <a
+                  href="tel:+905466067631"
+                  class="text-gray-300 hover:text-yellow-400 text-xl"
+                >
+                  +90 546 606 7631
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Map -->
+          <div
+            class="bg-gray-900 rounded-xl overflow-hidden h-96 w-full"
+            data-aos="fade-left"
+          >
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d358.98888191436!2d39.60286703707388!3d41.01409472930287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1str!2str!4v1757363387609!5m2!1str!2str"
+              class="w-full h-full border-0"
+              loading="lazy"
+            >
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 pb-10 pt-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+          <!-- Footer Branding -->
+          <div>
+            <h3 class="text-yellow-400 font-bold text-2xl mb-4">AYES YAPI</h3>
+            <p class="text-gray-400 mb-6 max-w-xs">Sosyal Medya
+            <div class="flex justify-start">
+              <a
+                href="https://www.instagram.com/ayesyapiinsaat/"
+                class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-yellow-400 hover:bg-yellow-400 hover:text-black transition"
+                target="_blank"
+              >
+                <i data-feather="instagram" class="w-5 h-5"></i>
+              </a>
+            </div>
+            </p>
+          </div>
+
+          <!-- Footer Contact -->
+          <div>
+            <h4
+              class="text-gray-300 font-bold text-lg border-l-4 border-yellow-400 pl-3 mb-5"
+            >
+              İLETİŞİM
+            </h4>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <i
+                  data-feather="map-pin"
+                  class="w-4 h-4 mt-1 mr-3 text-yellow-400"
+                ></i>
+                <span class="text-gray-400"
+                  >Söğütlü / Adnan Kahveci Bulvarı, Trabzon</span
+                >
+              </li>
+              <li class="flex items-start">
+                <i
+                  data-feather="phone"
+                  class="w-4 h-4 mt-1 mr-3 text-yellow-400"
+                ></i>
+                <span class="text-gray-400">+90 546 606 7631</span>
+              </li>
+              <li class="flex items-start">
+                <i
+                  data-feather="mail"
+                  class="w-4 h-4 mt-1 mr-3 text-yellow-400"
+                ></i>
+                <span class="text-gray-400">info@ayesyapi.com</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="pt-8 mt-8 border-t border-gray-800 text-center text-gray-500"
+        >
+          <p>&copy; 2025 AYES YAPI İNŞAAT. Tüm Hakları Saklıdır.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modal for Image Gallery -->
+    <div
+      id="imageModal"
+      class="fixed inset-0 bg-black/90 backdrop-blur-lg z-[100] hidden items-center justify-center p-4"
+    >
+      <div class="relative w-full max-w-6xl">
+        <button
+          id="closeModal"
+          class="absolute top-4 right-4 text-white bg-black/50 rounded-full p-2 z-10 hover:bg-black transition"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-8 w-8"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+        <button
+          id="prevModal"
+          class="absolute left-4 top-1/2 -translate-y-1/2 text-white bg-black/50 rounded-full p-2 z-10 hover:bg-black transition"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-8 w-8"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 19l-7-7 7-7"
+            />
+          </svg>
+        </button>
+        <button
+          id="nextModal"
+          class="absolute right-4 top-1/2 -translate-y-1/2 text-white bg-black/50 rounded-full p-2 z-10 hover:bg-black transition"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-8 w-8"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
+        </button>
+        <div class="flex flex-col items-center">
+          <img
+            id="modalImage"
+            src=""
+            alt="Project Image"
+            class="max-h-[80vh] object-contain"
+          />
+          <div class="mt-4 text-center">
+            <h3 id="modalTitle" class="text-yellow-400 font-bold text-2xl"></h3>
+            <p id="modalDescription" class="text-gray-200 mt-2"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      AOS.init({
+        duration: 1000,
+        easing: "ease-in-out",
+        once: true,
+      });
+
+      // Mobile Menu Toggle with smooth animation
+      const mobileMenu = document.getElementById("mobileMenu");
+      const menuContent = document.getElementById("mobileMenuContent");
+
+      mobileMenu.addEventListener("click", () => {
+        if (menuContent.classList.contains("hidden")) {
+          // Show menu with slide down effect
+          menuContent.classList.remove("hidden");
+          menuContent.style.maxHeight = "0";
+          menuContent.style.overflow = "hidden";
+          setTimeout(() => {
+            menuContent.style.transition = "max-height 0.3s ease-out";
+            menuContent.style.maxHeight = menuContent.scrollHeight + "px";
+          }, 10);
+        } else {
+          // Hide menu with slide up effect
+          menuContent.style.maxHeight = "0";
+          menuContent.style.transition = "max-height 0.3s ease-out";
+          setTimeout(() => {
+            menuContent.classList.add("hidden");
+            menuContent.style.transition = "";
+            menuContent.style.maxHeight = "";
+            menuContent.style.overflow = "";
+          }, 300);
+        }
+
+        feather.replace();
+
+        if (!menuContent.classList.contains("hidden")) {
+          menuContent.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => {
+              // Hide menu with slide up effect when a link is clicked
+              menuContent.style.maxHeight = "0";
+              menuContent.style.transition = "max-height 0.3s ease-out";
+              setTimeout(() => {
+                menuContent.classList.add("hidden");
+                menuContent.style.transition = "";
+                menuContent.style.maxHeight = "";
+                menuContent.style.overflow = "";
+              }, 300);
+            });
+          });
+        }
+      });
+
+      // Projects carousel - no navigation needed as we have scrollbar
+      const projectsCarousel = document.getElementById("projectsCarousel");
+
+      // Smooth scrolling
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Modal functionality
+      const modal = document.getElementById("imageModal");
+      const modalImage = document.getElementById("modalImage");
+      const modalTitle = document.getElementById("modalTitle");
+      const modalDescription = document.getElementById("modalDescription");
+      const closeModalBtn = document.getElementById("closeModal");
+      const prevModalBtn = document.getElementById("prevModal");
+      const nextModalBtn = document.getElementById("nextModal");
+
+      // Get all project images
+      const projectImages = document.querySelectorAll(".group.cursor-pointer");
+      let currentIndex = 0;
+
+      function openModal(src, title, description) {
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+        modalImage.src = src;
+        modalTitle.textContent = title;
+        modalDescription.textContent = description;
+
+        // Find current index
+        const allImages = Array.from(projectImages);
+        currentIndex = allImages.findIndex((img) => {
+          const imgElement = img.querySelector("img");
+          return imgElement && imgElement.src.includes(src.split("/").pop());
+        });
+      }
+
+      function closeModal() {
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+      }
+
+      function showPrevImage() {
+        const allImages = Array.from(projectImages);
+        currentIndex = (currentIndex - 1 + allImages.length) % allImages.length;
+        const imgElement = allImages[currentIndex].querySelector("img");
+        const titleElement = allImages[currentIndex].querySelector("h3");
+        const descElement = allImages[currentIndex].querySelector("p");
+
+        if (imgElement) {
+          modalImage.src = imgElement.src;
+          modalTitle.textContent = titleElement ? titleElement.textContent : "";
+          modalDescription.textContent = descElement
+            ? descElement.textContent
+            : "";
+        }
+      }
+
+      function showNextImage() {
+        const allImages = Array.from(projectImages);
+        currentIndex = (currentIndex + 1) % allImages.length;
+        const imgElement = allImages[currentIndex].querySelector("img");
+        const titleElement = allImages[currentIndex].querySelector("h3");
+        const descElement = allImages[currentIndex].querySelector("p");
+
+        if (imgElement) {
+          modalImage.src = imgElement.src;
+          modalTitle.textContent = titleElement ? titleElement.textContent : "";
+          modalDescription.textContent = descElement
+            ? descElement.textContent
+            : "";
+        }
+      }
+
+      // Event listeners
+      closeModalBtn.addEventListener("click", closeModal);
+      prevModalBtn.addEventListener("click", showPrevImage);
+      nextModalBtn.addEventListener("click", showNextImage);
+
+      // Close modal when clicking outside the image
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          closeModal();
+        }
+      });
+
+      // Keyboard navigation
+      document.addEventListener("keydown", (e) => {
+        if (!modal.classList.contains("hidden")) {
+          if (e.key === "Escape") {
+            closeModal();
+          } else if (e.key === "ArrowLeft") {
+            showPrevImage();
+          } else if (e.key === "ArrowRight") {
+            showNextImage();
+          }
+        }
+      });
+
+      feather.replace();
+    </script>
+  </body>
+</html>
